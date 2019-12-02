@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibreriasJuego
 {
-    interface BaseDatosGeografica
+    public interface BaseDatosGeografica
     {
 
         public Pais getPais(string nombrePais);
