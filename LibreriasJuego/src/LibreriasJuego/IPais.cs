@@ -1,10 +1,10 @@
 ﻿namespace LibreriasJuego
 {
-    public interface Pais
+    public interface IPais
     {
         public string nombre { get; }
         public string capital{ get; }
-        public Continente continente { get; }
+        public IContinente continente { get; }
 
     }
 }
