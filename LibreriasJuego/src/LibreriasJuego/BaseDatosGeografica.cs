@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using System.Text;
 
 
@@ -31,29 +33,45 @@ namespace LibreriasJuego
         private void popularBaseDatos()
         {
             List<string> nombresContinentes = new List<string>();
-            nombresContinentes.Add("Africa");
-            nombresContinentes.Add("America");
-            nombresContinentes.Add("Asia");
+//            nombresContinentes.Add("Africa");
+//            nombresContinentes.Add("America");
+//            nombresContinentes.Add("Asia");
             nombresContinentes.Add("Europa");
-            nombresContinentes.Add("Oceania");
+//            nombresContinentes.Add("Oceania");
 
             foreach (string nombre in nombresContinentes)
             {
                 // Crear Continente
-                IContinente c = new Continente(nombre);
+                Continente c = new Continente(nombre);
                 this.continentes.Add(nombre, c);
+                
                 // Leer fichero por continente
+                string path = Path.Combine(
+                    Path.GetDirectoryName(
+                        Assembly.GetExecutingAssembly().Location)
+                    , @"continentes\"+nombre+".txt");
+
+                string[] lineas = File.ReadAllLines(path);
 
                 // Crear Paises
-                // Almacenar
+                foreach (string linea in lineas) {
+                    IPais p=procesarLineaPais(linea, c);
+                    // Almacenarlo
+                    if(!this.paises.ContainsKey(p.nombre))
+                        this.paises.Add(p.nombre, p); //Diccionario de paises
+                    c.asignarPais(p);
+                }
+
             }
         }
-    }
+    
 
         private IPais procesarLineaPais(string linea, IContinente continente) {
             //Bielorrusia: Minsk - Rublo Bielorruso
-            String nombre = null;
-            String capital = null;
+            string[] partes = linea.Split(":");
+            string nombre = partes[0].Trim();
+            partes = partes[1].Split("-");
+            string capital = partes[0].Trim();
             IPais p = new Pais(continente, nombre,capital);
             return p;
         }

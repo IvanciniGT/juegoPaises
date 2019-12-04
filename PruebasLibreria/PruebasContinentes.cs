@@ -1,5 +1,8 @@
 using LibreriasJuego;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
+
 namespace PruebasLibreria
 {
     [TestClass]
@@ -38,8 +41,11 @@ namespace PruebasLibreria
             IBaseDatosGeografica miBaseDatosGeografica =
                 Juego.dameElJuego().baseDatosGeografica;
             IContinente europa = miBaseDatosGeografica.getContinente("Europa");
-            IPais nuevaZelanda = europa.getPais("Nueva Zelanda");
-            Assert.IsNull(nuevaZelanda);
+            
+           
+            Assert.ThrowsException<KeyNotFoundException>(
+                ()=>europa.getPais("Nueva Zelanda")
+                );
         }
 
     }
