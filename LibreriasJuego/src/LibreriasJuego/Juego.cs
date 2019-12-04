@@ -7,7 +7,7 @@ namespace LibreriasJuego
     public class Juego
     {
         private Juego() {
-            baseDatosJugadores = null;
+            baseDatosJugadores = new BaseDatosJugadoresCutre();
             baseDatosGeografica = null;
         }
 

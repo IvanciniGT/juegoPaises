@@ -6,7 +6,6 @@ namespace LibreriasJuego
     {
         internal Continente(string nombre) {
             this.nombre = nombre;
-            this.paises = new List<IPais>();
             this.misPaises = new Dictionary<string, IPais>();
 
         }
@@ -14,10 +13,7 @@ namespace LibreriasJuego
 
         public string nombre { get; }
 
-        public List<IPais> paises { get=>{
-                return X;
-            } 
-        }
+        public IList<IPais> paises { get => new List<IPais>(this.misPaises.Values).AsReadOnly(); }
 
         public IPais getPais(string nombrePais) {
             return this.misPaises[nombrePais];

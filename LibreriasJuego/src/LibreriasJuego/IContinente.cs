@@ -6,7 +6,7 @@ namespace LibreriasJuego
     {
         public string nombre{ get; }
 
-        public List<IPais> paises { get; }
+        public IList<IPais> paises { get; }
 
         public IPais getPais(string nombrePais);
 
