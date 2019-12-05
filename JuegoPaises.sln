@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasLibreria", "PruebasL
 		{8CC9E6C2-BE24-4F2F-B2E7-8B64A86EA175} = {8CC9E6C2-BE24-4F2F-B2E7-8B64A86EA175}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfazJuego", "InterfazJuego\InterfazJuego.csproj", "{88857D91-3E3C-41DA-ACE7-B75142CA74C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{D4DC3E3F-73F4-41AF-AFF4-9889F69E4782}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4DC3E3F-73F4-41AF-AFF4-9889F69E4782}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4DC3E3F-73F4-41AF-AFF4-9889F69E4782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88857D91-3E3C-41DA-ACE7-B75142CA74C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88857D91-3E3C-41DA-ACE7-B75142CA74C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88857D91-3E3C-41DA-ACE7-B75142CA74C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88857D91-3E3C-41DA-ACE7-B75142CA74C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
