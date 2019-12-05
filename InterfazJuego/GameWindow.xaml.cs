@@ -18,16 +18,16 @@ namespace InterfazJuego
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GameWindow : Window
     {
-        public MainWindow()
+        public GameWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btn_Finalizar_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

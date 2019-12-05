@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace InterfazJuego
 {
     /// <summary>
@@ -23,6 +22,21 @@ namespace InterfazJuego
         public MainWindow()
         {
             InitializeComponent();
+            //Inicializar el juego
+
+        }
+
+        private void btn_Jugar_Click(object sender, RoutedEventArgs e)
+        {
+            var nombreJugador = txt_Jugador.Text;
+            var continente = cmb_Continentes.SelectedItem;
+            // Mirar si el Jugador existe, sino lo creo y 
+            // Lo recupero
+
+            // Crearle una partida
+
+            GameWindow ventanaJuego = new GameWindow();
+            ventanaJuego.Show();
         }
     }
 }

@@ -14,7 +14,7 @@
         <Label Content="Continente:&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txt_Jugador" HorizontalAlignment="Left" Height="23" Margin="96,19,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="197"/>
         <ComboBox x:Name="cmb_Continentes" HorizontalAlignment="Left" Margin="96,50,0,0" VerticalAlignment="Top" Width="197"/>
-        <Button x:Name="btn_Jugar" Content="Jugar" HorizontalAlignment="Left" Height="23" Margin="218,83,0,-6" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn_Jugar" Content="Jugar" HorizontalAlignment="Left" Height="23" Margin="218,83,0,-6" VerticalAlignment="Top" Width="75" Click="btn_Jugar_Click"/>
 
     </Grid>
 </Window>
