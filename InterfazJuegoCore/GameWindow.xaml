@@ -13,7 +13,7 @@
         <Label Content="Pais:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top"/>
         <Label Content="Capital:&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txt_Capital" HorizontalAlignment="Left" Height="23" Margin="96,48,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="197"/>
-        <Button x:Name="btn_Probar" Content="Probar" HorizontalAlignment="Left" Height="23" Margin="216,129,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn_Probar" Content="Probar" HorizontalAlignment="Left" Height="23" Margin="216,129,0,0" VerticalAlignment="Top" Width="75" Click="btn_Probar_Click"/>
         <Label x:Name="lbl_Pais" Content="España" HorizontalAlignment="Left" Margin="91,16,0,0" VerticalAlignment="Top"/>
         <Label Content="Intentos" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_Intentos" Content="3" HorizontalAlignment="Left" Margin="96,72,0,0" VerticalAlignment="Top"/>
